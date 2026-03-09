@@ -1,0 +1,35 @@
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.batchTable th,
+.batchTable td {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.icon {
+  margin-right: 5px;
+  color: #ff9900;
+}
+
+.enrollBtn {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  border: none;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.enrollBtn:hover {
+  background: linear-gradient(45deg, #ff9900, #ffcc00);
+  color: black;
+}

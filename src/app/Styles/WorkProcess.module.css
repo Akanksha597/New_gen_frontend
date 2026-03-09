@@ -1,0 +1,46 @@
+.glassCard {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.glassCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+   .section-title {
+          display: inline-block;
+          font-size: 1.8rem;
+          font-weight: 800;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          background: linear-gradient(
+            90deg,
+            #ff6ec7,
+            #7366ff,
+            #00c6ff,
+            #ff6ec7
+          );
+          background-size: 300% 300%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientFlow 7s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+

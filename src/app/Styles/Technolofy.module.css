@@ -1,0 +1,96 @@
+.skillsSection {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  padding: 80px 0;
+  color: white;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.categoryTitle::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.categoryTitle.yellow::after {
+  background: #f6e05e;
+}
+.categoryTitle.cyan::after {
+  background: #00e6ff;
+}
+.categoryTitle.pink::after {
+  background: #ff69b4;
+}
+.categoryTitle.purple::after {
+  background: #a855f7;
+}
+.categoryTitle.orange::after {
+  background: #f97316;
+}
+.categoryTitle.green::after {
+  background: #22c55e;
+}
+
+/* Logo cards */
+.logoCard {
+  background: #111;
+  padding: 25px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+
+  /* ✨ Continuous floating + scaling animation */
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hover animations */
+.logoCard:hover {
+  transform: translateY(-8px) scale(1.08) rotate3d(1, 1, 0, 10deg);
+}
+
+/* Category glow colors */
+.logoCard.yellow:hover {
+  box-shadow: 0 0 25px #f6e05e;
+}
+.logoCard.cyan:hover {
+  box-shadow: 0 0 25px #00e6ff;
+}
+.logoCard.pink:hover {
+  box-shadow: 0 0 25px #ff69b4;
+}
+.logoCard.purple:hover {
+  box-shadow: 0 0 25px #a855f7;
+}
+.logoCard.orange:hover {
+  box-shadow: 0 0 25px #f97316;
+}
+.logoCard.green:hover {
+  box-shadow: 0 0 25px #22c55e;
+}
+
+/* ✨ Keyframes for continuous animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}

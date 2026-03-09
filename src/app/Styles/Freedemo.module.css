@@ -1,0 +1,17 @@
+.buttonCustom {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.buttonCustom:hover {
+  background: white;
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,372 @@
+.navCollapse {
+  text-align: left;
+}
+
+
+
+.navItems {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.navItem {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.navLink {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  /* background-color: green; */
+  transition: width 0.4s ease;
+  font-weight: bold;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.activeLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color:red;
+}
+
+/* Dropdown toggle custom underline on hover + active */
+.dropdownToggles {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  color: #000;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight:bold ;
+}
+
+.dropdownToggles::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.dropdownToggles:hover::after,
+.activeDropdown::after {
+  width: 100%;
+}
+
+/* Remove Bootstrap default dropdown arrow */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  margin-top: 0.25rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownMenu .dropdown-item {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  white-space: nowrap;
+  position: relative;
+}
+
+.dropdownMenu .dropdown-item.activeLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color:red;
+}
+
+.dropdownMenu .dropdown-item:hover {
+  background-color:green;
+  color: #fff;
+}
+
+.toggleButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggleButton:hover {
+  transform: scale(1.1);
+}
+
+.stickyHeader {
+  position: fixed !important;
+  top:0px;
+  z-index: 1030;
+  width: 100%;
+  background-color: white;
+}
+
+
+/* Mega menu container with glassmorphism + background image */
+/* Mega menu container with dark glassmorphism gradient */
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark glass */
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 0;
+  z-index: 1000;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+ background-color: #000;
+  background-size: cover;
+  background-position: center;
+  animation: fadeSlideDown 0.5s ease forwards;
+}
+
+/* Dark gradient overlay */
+.megaMenu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark gradient: black → dark gray → semi-transparent black */
+  /* background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(25, 25, 25, 0.6),
+    rgba(0, 0, 0, 0.5)
+  ); */
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+
+.megaMenu .row {
+  margin: 0;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1; /* content above gradient overlay */
+ 
+}
+
+.megaMenu h6 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+ 
+  
+}
+
+.megaMenu h6 svg {
+ 
+  color: #ffffff;
+}
+
+.megaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.megaList li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 10px;
+
+   margin-bottom: 10px;
+}
+
+.megaList li:hover {
+  transform: translateX(8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.badge {
+  font-size: 0.65rem;
+  background: #ffeb3b;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 6px;
+}
+
+/* Fade + slide animation */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.courseLink {
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+  .courseLink {
+    color: #fff;
+  }
+  .courseLink:hover {
+    color: #ffeb3b;
+  }
+
+
+
+/* Mobile & tablet responsive adjustments */
+@media (max-width: 992px) {
+  .megaMenu {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    max-height: 40vh; /* 40% of viewport height */
+    overflow-y: auto;  /* vertical scroll if content exceeds */
+  }
+
+  .megaList {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .megaList li {
+    flex: 1 1 auto; /* take full width */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05); /* light black background */
+    color: #000; /* black text */
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .megaList li:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Optional: custom vertical scrollbar */
+  .megaMenu::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .megaMenu::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 3px;
+  }
+
+  .megaMenu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .megaMenu h6 {
+    color: #000;
+  }
+  .megaMenu h6 svg {
+    color: #000;
+  }
+ .courseLink {
+    color: #000;
+  }
+  .courseLink:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  
+
+}
+
+
+
+@media (min-width: 992px) {
+  .navItems {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navItem {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .navLink,
+  .dropdownToggles {
+    padding: 0.5rem 1rem;
+  }
+  /* .stickyHeader {
+  top: 30px;
+
+  } */
+}
+
+
+

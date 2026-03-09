@@ -1,0 +1,192 @@
+/* coursespage.module.css */
+
+/* page background */
+.pageWrap {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f3f8fb 0%, #eef6fb 100%);
+  padding-bottom: 60px;
+}
+
+/* hero */
+.hero {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 16px rgba(18, 25, 29, 0.04);
+}
+.heroTitle {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  text-align: center;
+}
+
+/* Tabs */
+.tabsWrap {
+  margin-bottom: 22px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tabPill {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.18);
+  color: #1b2733;
+  transition: transform 180ms ease, background 220ms ease, box-shadow 220ms ease;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.tabPill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 20, 30, 0.08);
+}
+.active {
+  background: linear-gradient(90deg, #060607, #a31d28);
+  color: #fff;
+  border: none;
+}
+
+/* Card Styles */
+.card3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 14px;
+  overflow: hidden;
+  animation: popIn 420ms ease forwards;
+}
+.card3d:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Glass look */
+.glassCard {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 10px 30px rgba(9, 20, 30, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Image container */
+.cardMedia {
+  position: relative; /* Important fix */
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.03));
+}
+
+/* Body */
+.cardBody {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 18px;
+  flex: 1 1 auto;
+}
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0b1a27;
+}
+.cardDesc {
+  font-size: 14px;
+  color: #555;
+  height: 55px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Footer */
+.cardFooter {
+  display: flex;
+  justify-content: center;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 0 0 12px 12px;
+  gap: 8px;
+}
+
+/* Buttons */
+.btnCommon {
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+.syllabusBtn {
+  composes: btnCommon;
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  color: white;
+  border: none;
+}
+.syllabusBtn:hover {
+  background: linear-gradient(45deg, #ffdb4d, #ffad33);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.4);
+}
+.exploreBtn {
+  composes: btnCommon;
+  background: linear-gradient(45deg, #000000, #434343);
+  color: white;
+  border: none;
+}
+.exploreBtn:hover {
+  background: linear-gradient(45deg, #222, #555);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+.disabledBtn {
+  composes: btnCommon;
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    transform: translateY(12px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardMedia {
+    height: 160px;
+  }
+}

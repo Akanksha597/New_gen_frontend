@@ -1,0 +1,87 @@
+.heroSection {
+  background: linear-gradient(120deg, #0c0c24, #1c1c4d);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  position: relative;
+  justify-content: center;
+
+}
+
+/* Buttons */
+.customBtn {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  padding: 10px 20px;
+  color: white !important;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+.customBtn:hover {
+  transform: scale(1.05);
+}
+
+.customBtnRed {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 10px 20px;
+  color: white !important;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+.customBtnRed:hover {
+  transform: scale(1.05);
+}
+
+/* Contact form box */
+.contactBox {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  position: relative;
+}
+
+/* Man image (animation) */
+.manWrapper {
+  position: absolute;
+  top: -10px;
+  left: -323px;
+  animation: float 3s ease-in-out infinite;
+  display: none; /* hidden by default */
+}
+
+.man {
+  width: 420px;
+  height: auto;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ✅ Responsive adjustments */
+@media (min-width: 992px) {
+  /* Show man only on lg screens and above */
+  .manWrapper {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Fix text cut issue on small screens */
+  .heroSection {
+    margin-top: 60px;
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+  .contactBox {
+    margin-top: 30px;
+  }
+}
+

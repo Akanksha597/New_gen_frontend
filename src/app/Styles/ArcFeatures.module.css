@@ -1,0 +1,156 @@
+:root {
+  --bg: #1f1f1f;
+  --muted-white: rgba(255,255,255,0.88);
+  --stroke: rgba(255,255,255,0.08);
+  --accent: #9be15d; /* small accent color, swap to your brand */
+}
+
+/* Section wrapper */
+.section {
+  background: var(--bg);
+  color: var(--muted-white);
+  padding: 40px 0 90px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* center the crop */
+.centerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* cropping container shows only top half of the circle */
+.crop {
+  --size: 920px; /* default; overridden inline for easy control */
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* The circle stroke (full circle, bottom half hidden by crop) */
+.circleStroke {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 6px solid var(--stroke);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background: transparent;
+  /* subtle inner ring */
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+/* Each positioned item — placed from center then rotated and translated outward (see component transform) */
+.orbitItem {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  display: block;
+  pointer-events: auto;
+}
+
+/* inner content: icon circle + label */
+.itemInner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  /* keep the stacked block centered visually */
+}
+
+/* Icon circle styling */
+.iconCircle {
+  width: 94px;
+  height: 94px;
+  min-width: 94px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  color: var(--accent);
+}
+
+/* label block styling */
+.labelWrap {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelText {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--muted-white);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+
+/* if you want a small subtitle (unused here) */
+.labelSub {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+/* Left vs right alignment (keeps the label outside the circle like the image) */
+.leftSide { flex-direction: row-reverse; }
+.leftSide .labelWrap { text-align: right; margin-right: 10px; }
+.leftSide .iconCircle { margin-left: 8px; }
+
+.rightSide { flex-direction: row; }
+.rightSide .labelWrap { text-align: left; margin-left: 10px; }
+.rightSide .iconCircle { margin-right: 8px; }
+
+/* central logo/text */
+.centerLogo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  pointer-events: none;
+}
+.logoTitle {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.logoSub {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+/* responsive tweaks */
+@media (max-width: 1100px) {
+  .crop { --size: 760px; }
+  .iconCircle { width: 78px; height: 78px; min-width: 78px; }
+  .labelWrap { max-width: 190px; }
+}
+
+@media (max-width: 820px) {
+  .crop { --size: 620px; }
+  .iconCircle { width: 68px; height: 68px; min-width: 68px; }
+  .labelWrap { max-width: 160px; }
+  .labelText { font-size: 14px; }
+  .section { padding-bottom: 60px; }
+}
+
+@media (max-width: 480px) {
+  /* stack items vertically and hide arc detail on tiny screens */
+  .crop { --size: 420px; height: 220px; }
+  .circleStroke { border-width: 4px; }
+  .iconCircle { width: 60px; height: 60px; min-width: 60px; }
+  .labelWrap { max-width: 140px; }
+  .itemInner { gap: 8px; }
+}
