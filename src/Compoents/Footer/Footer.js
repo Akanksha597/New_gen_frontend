@@ -104,7 +104,7 @@ const Footer = () => {
         href="mailto:Shree@shreequalityservices.com"
         className="text-white text-decoration-none hover-link"
       >
-       enquiry@newgensoftech.com
+       enquiry@newgeninfotech.com
       </a>
     </li>
 
@@ -159,7 +159,7 @@ const Footer = () => {
           <div className="col-md-12 text-center mb-2">
             <p className="mb-0 footer-text">
              
-              © 2025 Newgen Softech. All Rights Reserved
+              Copyright ©️ all rights reserved newgen corporate training Center
             </p>
           </div>
         </div>

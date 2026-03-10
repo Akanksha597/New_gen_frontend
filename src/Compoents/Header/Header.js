@@ -149,9 +149,9 @@ const Header = () => {
             {/* Other static pages */}
             {[
               { href: "/AboutUs", label: "About Us" },
-              { href: "/UpcomingBatches", label: "Upcoming Batches" },
-              { href: "/Development", label: "Development" },
-              { href: "/TechnicalSupport", label: "Technical Support" },
+              { href: "/UpcomingBatches", label: "UpComing Batches" },
+              // { href: "/Development", label: "Development" },
+              // { href: "/TechnicalSupport", label: "Technical Support" },
               { href: "/hiring", label: "Job openings" },
               { href: "/ContactUs", label: "Contact Us" },
               { href: "/Login", label: "Login Here" },

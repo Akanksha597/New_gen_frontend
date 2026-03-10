@@ -375,7 +375,7 @@ export default function Prograssbar() {
             transform: "translate(-50%, -50%)",
           }}
         >
-        <h2 className="fw-bold text-danger fs-2">NEWGEN SOFTECH</h2>
+        <h2 className="fw-bold text-danger fs-2">NEWGEN InfoTECH</h2>
 
           <p className="small">Your Personal Learning Hub !</p>
         </div>
