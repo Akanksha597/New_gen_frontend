@@ -107,8 +107,8 @@ export default function Enquiery() {
               </div>
 
               <div className="mt-3">
-                <a href="mailto:enquiry@newgensoftech.com" className={`${styles.customBtnRed} btn`}>
-                  <i className="bi bi-envelope"></i> enquiry@newgensoftech.com
+                <a href="mailto:enquiry@newgeninfotech.com" className={`${styles.customBtnRed} btn`}>
+                  <i className="bi bi-envelope"></i> enquiry@enquiry@newgeninfotech.com
                 </a>
               </div>
 
