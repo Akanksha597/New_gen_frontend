@@ -86,7 +86,7 @@ export default function Services() {
             </div>
             <p className="text-muted fs-5">
               Smartphones have transformed how businesses engage with customers.
-              Newgen Softtech has been at the forefront of mobile technology,
+              Newgen infotech has been at the forefront of mobile technology,
               developing high-performance mobile applications that enhance user
               experience and drive growth.
             </p>

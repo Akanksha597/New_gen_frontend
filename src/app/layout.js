@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Newgen Softech",
+  title: "Newgen infotech",
 };
 
 export default function RootLayout({ children }) {

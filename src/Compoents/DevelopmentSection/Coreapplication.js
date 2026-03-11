@@ -27,7 +27,7 @@ export default function Coreapplication() {
 
             </h2>
             <p className="mb-4 text-start text-lg-center">
-             At Newgen Softtech, we are a globally recognized team of software engineers, delivering custom software solutions that drive innovation and business success. Since 1997, we have developed numerous enterprise applications, CMS platforms, process automation tools, and databases—adapting to the latest technologies to offer scalable and future-ready solutions. We prioritize customized software engineering that aligns with your business goals, industry trends, and evolving technology to ensure a competitive edge.
+             At Newgen infotech, we are a globally recognized team of software engineers, delivering custom software solutions that drive innovation and business success. Since 1997, we have developed numerous enterprise applications, CMS platforms, process automation tools, and databases—adapting to the latest technologies to offer scalable and future-ready solutions. We prioritize customized software engineering that aligns with your business goals, industry trends, and evolving technology to ensure a competitive edge.
             </p>
             <Button href="/ContactUs" className={styles.buttonCustom}>
             Get Access Now →
